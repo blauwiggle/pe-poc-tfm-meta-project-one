@@ -1,7 +1,6 @@
-{% for extension, details in cookiecutter.groups.items() %}
-
 locals {
   groups_config = [
+    {% for extension, details in cookiecutter.groups.items() %}
     {
       group_subject     = "{{ details.group_subject }}"
       group_description = "{{ details.group_description }}"
@@ -14,6 +13,5 @@ locals {
       members           = [{{ member }}]
       {% endfor -%}
     }
+    {% endfor %}
   ]
-
-{% endfor %}
