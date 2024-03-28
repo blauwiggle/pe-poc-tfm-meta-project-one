@@ -3,10 +3,10 @@
 locals {
   groups_config = [
     {
-      group_subject     = "{{ details.group_subject }}"
-      group_description = "{{ details.group_description }}"
+      # group_subject     = "{{ details.group_subject }}"
+      # group_description = "{{ details.group_description }}"
 
-      {% for member in details.members -%}
+      {% for owner in details.owners -%}
       owners            = [{{ owner }}]
       {% endfor -%}
 
