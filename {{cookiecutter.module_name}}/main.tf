@@ -1,10 +1,10 @@
-{% for extension, details in cookiecutter.groups %}
+{% for extension, details in cookiecutter.groups.items() %}
 
 locals {
   groups_config = [
     {
-      # group_subject     = "{{ details.group_subject }}"
-      # group_description = "{{ details.group_description }}"
+      group_subject     = "{{ details.group_subject }}"
+      group_description = "{{ details.group_description }}"
 
       {% for owner in details.owners -%}
       owners            = [{{ owner }}]
