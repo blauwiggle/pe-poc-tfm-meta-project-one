@@ -4,7 +4,9 @@ locals {
       group_subject     = "{{cookiecutter.group_subject}}"
       group_description = "{{cookiecutter.group_description}}"
       owners            = ["{{cookiecutter.owners}}"]
-      members           = ["{{cookiecutter.members}}"]
+      {% for member in cookiecutter.members %}
+      members           = ["{{member}}"]
+      {% endfor %}
     }
   ]
 }
