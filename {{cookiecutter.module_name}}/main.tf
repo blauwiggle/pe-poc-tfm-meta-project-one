@@ -9,4 +9,4 @@ locals {
     },{% if not loop.last %}{% endif %}
     {% endfor %}
   ]
-}
+} // {{cookiecutter.project_author}}
