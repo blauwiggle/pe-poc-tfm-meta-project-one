@@ -1,7 +1,6 @@
 {
-  "module_name": "test",
-  "group_subject": "replace me with the group subject",
-  "owners": ["replace me with the owner objects id"],
-  "members": ["replace me with the member object ids"],
-  "group_description": "replace me with the group description"
+  "group_subject": "Project_One_Read",
+  "owners": ["c8278d1e-e3ff-4976-bd31-325fb9c526bd"],
+  "members": ["c8278d1e-e3ff-4976-bd31-325fb9c526bd", "38b57230-492a-44ed-9966-bf83f4fb41d9"],
+  "group_description": "Read group"
 }
