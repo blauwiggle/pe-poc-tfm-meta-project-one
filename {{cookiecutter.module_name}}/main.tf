@@ -1,10 +1,19 @@
+{% for extension, details in cookiecutter.groups %}
+
 locals {
   groups_config = [
     {
-      group_subject     = "{{ cookiecutter.group_subject }}"
-      group_description = "{{ cookiecutter.group_description }}"
-      owners            = [{{ cookiecutter.owners | map(attribute='id') | join(', ') }}]
-      members           = [{{ cookiecutter.members | map(attribute='id') | join(', ') }}]
+      group_subject     = "{{ details.group_subject }}"
+      group_description = "{{ details.group_description }}"
+
+      {% for member in details.members -%}
+      owners            = [{{ owner }}]
+      {% endfor -%}
+
+      {% for member in details.members -%}
+      members           = [{{ member }}]
+      {% endfor -%}
     }
   ]
-}
+
+{% endfor %}

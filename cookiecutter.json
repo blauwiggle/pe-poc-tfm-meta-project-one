@@ -1,12 +1,28 @@
 {
-  "module_name": "module",
-  "group_subject": "Project_One_Read",
-  "owners": [
-    {"id": "c8278d1e-e3ff-4976-bd31-325fb9c526bd"}
-  ],
-  "members": [
-    {"id": "c8278d1e-e3ff-4976-bd31-325fb9c526bd"},
-    {"id": "38b57230-492a-44ed-9966-bf83f4fb41d9"}
-  ],
-  "group_description": "Read group"
+  "module_name": "new_project",
+
+  "groups": {
+      "admin": {
+          "group_subject": "Admin",
+          "group_description": "Admin group",
+          "owners": [
+            "c8278d1e-e3ff-4976-bd31-325fb9c526bd"
+          ],
+          "members": [
+            "c8278d1e-e3ff-4976-bd31-325fb9c526bd",
+            "38b57230-492a-44ed-9966-bf83f4fb41d9"
+          ]
+      },
+      "support": {
+        "group_subject": "Support",
+        "group_description": "Support group",
+        "owners": [
+          "c8278d1e-e3ff-4976-bd31-325fb9c526bd"
+        ],
+        "members": [
+          "c8278d1e-e3ff-4976-bd31-325fb9c526bd",
+          "38b57230-492a-44ed-9966-bf83f4fb41d9"
+        ]
+      }
+  }
 }
