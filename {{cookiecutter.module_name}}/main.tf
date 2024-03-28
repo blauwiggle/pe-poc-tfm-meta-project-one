@@ -1,11 +1,11 @@
 locals {
   groups_config = [
-    {% for extension, details in cookiecutter.groups.items() %}
+    {% for k, v in cookiecutter.groups.items() %}
     {
-      group_subject     = "{{ details.group_subject }}"
-      group_description = "{{ details.group_description }}"
-      owners            = [{% for owner in details.owners %}"{{ owner }}"{% if not loop.last %}, {% endif %}{% endfor %}]
-      members           = [{% for member in details.members %}"{{ member }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+      group_subject     = "{{ v.group_subject }}"
+      group_description = "{{ v.group_description }}"
+      owners            = [{% for owner in v.owners %}"{{ owner }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+      members           = [{% for member in v.members %}"{{ member }}"{% if not loop.last %}, {% endif %}{% endfor %}]
     },{% if not loop.last %}{% endif %}
     {% endfor %}
   ]
